@@ -18,8 +18,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func keyPressed(_ sender: UIButton) {
+        // To reproduce a button clicked feedback effect
         sender.alpha = 0.5
         playSound(fileName: sender.currentTitle!)
+        
+        // To reproduce a button clicked feedback effect
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             sender.alpha = 1.0
         }
